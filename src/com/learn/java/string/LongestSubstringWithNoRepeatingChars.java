@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestSubstringWithNoRepeatingChars {
-    static final int NO_OF_CHARS = 256;
     public static void main(String[] args) {
         String str = "Heycoachsuper30";
         int res = longestUniqueSubsttr(str);

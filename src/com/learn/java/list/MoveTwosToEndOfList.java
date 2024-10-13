@@ -5,8 +5,8 @@ import java.util.List;
 
 public class MoveTwosToEndOfList {
     public static void main(String[] args) {
-        List<Integer> nums = Arrays.asList(2,3,5,6);    //2,4,2,3,2,2,2);//2,4,2,3,2,1,5 - 2,2,1
-        moveTwos(nums);
+            List<Integer> nums = Arrays.asList(2,3,5,6);    //2,4,2,3,2,2,2);//2,4,2,3,2,1,5 - 2,2,1
+            moveTwos(nums);
     }
     public static void moveTwos(List<Integer> nums) {
         int siz = nums.size();

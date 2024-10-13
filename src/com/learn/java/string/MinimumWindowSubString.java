@@ -1,7 +1,5 @@
 package com.learn.java.string;
 
-import java.util.List;
-
 public class MinimumWindowSubString {
     public static void main(String[] args) {
         String text = "ADOBECODEBANC";

@@ -3,7 +3,8 @@ package com.learn.java.arrays;
 public class MaximumSumSubarrayOfSizeK {
     public static void main(String[] args) {
         int[] arr = {2,1,1,3,5,8,9,3,8,1,1,2,4};
-        int maxSum = maximumSumSubarray(arr, 3);
+        int k = 3;
+        int maxSum = maximumSumSubarray(arr, k);
         System.out.println("maxSUm is : "+maxSum);
     }
 

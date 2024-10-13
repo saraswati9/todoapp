@@ -11,9 +11,9 @@ public class FirstNegativeInteger {
         for(int integer : intArr) {
             arr.add(integer);
         }
-        printFirstNegativeInteger(arr, 3);
+        printFirstNegativeInteger(arr);
     }
-    static void printFirstNegativeInteger(ArrayList<Integer> arr, int k) {
+    static void printFirstNegativeInteger(ArrayList<Integer> arr) {
         int i = 0, j = 0;
         int size = arr.size();
         ArrayList<Integer> list = new ArrayList<>();
@@ -21,9 +21,9 @@ public class FirstNegativeInteger {
             if (arr.get(j) < 0) {
                 list.add(arr.get(j));
             }
-            if (j - i + 1 < k) {
+            if (j - i + 1 < 3) {
                 j++;
-            } else if (j - i + 1 == k) {
+            } else if (j - i + 1 == 3) {
                 if (!list.isEmpty()) {
                     System.out.println(list.getFirst());
                     if (Objects.equals(arr.get(i), list.getFirst())) {
