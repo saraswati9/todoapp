@@ -1,17 +1,36 @@
 package com.learn.java.sort;
 
-import java.util.*;
-
 public class ArrangeTheBallsSWG {
-
     public static void main(String[] args) {
         //char[] balls = new char[]{'G', 'S', 'S', 'W', 'S', 'G', 'W', 'S'}; //S S S S W W G G
-        char[] balls = new char[]{'S','G','W','G','S'};
+        char[] balls = new char[]{'S','G','W','G','S'};       //{'S','S','G','G','W','W','W','W','W'};       //{'S','G','W','G','S'};
         arrangeTheBalls(balls.length, balls);
     }
-
     private static void arrangeTheBalls(int n, char[] balls) {
-        List<Character> list1 = Arrays.asList('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
+        int l=0, r=balls.length-1, len = balls.length;
+        arrangeRecursively(l,r,balls);
+        //System.out.println("balls: "+Arrays.toString(balls));
+        for (int i=0; i<len; i++) {
+            System.out.print(balls[i]+" ");
+        }
+    }
+    static void arrangeRecursively(int l, int r, char[] balls) {
+        if (balls[l] == 'S') {
+            l++;
+            arrangeRecursively(l, r, balls);
+        } else if (balls[l] == 'G') {
+            swap(l, r, balls);
+            l++; r--;
+            arrangeRecursively(l, r, balls);
+        }
+    }
+    static void swap(int l, int r, char[] balls) {
+        char temp = balls[r];
+        balls[r] = balls[l];
+        balls[l] = temp;
+    }
+}
+        /*List<Character> list1 = Arrays.asList('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
         List<Character> list2 = Arrays.asList('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
         HashMap<Character, Integer> ballsMap = new HashMap<>();
         StringBuffer sb = new StringBuffer();
@@ -39,6 +58,4 @@ public class ArrangeTheBallsSWG {
             System.out.println("new array values are: " + Arrays.toString(sb.toString().toCharArray()));
         } else {
             System.out.println();
-        }
-    }
-}
+        }*/

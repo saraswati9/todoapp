@@ -8,14 +8,18 @@ public class WaveArray {
         printArray(n);
     }
     public static void printArray(int[] arr) {
-        for (int i=0; i<arr.length; i=i+2) {
+        int len = arr.length;
+        for (int i=0; i<len; i=i+2) {
             int temp = arr[i];
-            if (i+1 <= arr.length-1) {
+            if (i+1 <= len-1) {
                 arr[i] = arr[i + 1];
                 arr[i + 1] = temp;
             }
         }
         System.out.println("waved array is: "+ Arrays.toString(arr));
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
     }
 
 }

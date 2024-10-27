@@ -14,7 +14,7 @@ public class FindTheIndicesOfAChar {
         int sLen = text.length();
         int pLen = pattern.length();
         for(int i=0; i<sLen; i++) {
-            String sub = "";
+            String sub;
             if (pLen <= sLen) {
                 sub = text.substring(i, pLen);
                 pLen++;
